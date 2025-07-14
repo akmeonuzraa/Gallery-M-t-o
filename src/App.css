@@ -1,0 +1,235 @@
+:root {
+  --primary-color: #d3568f;
+  --secondary-color: #ff1493;
+  --light-pink: #ffe6f2;
+  --pink-accent: #ffb6c1;
+  --dark-pink: #c71585;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--light-pink);
+  padding-bottom: 50px;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.navbar {
+  background: linear-gradient(135deg, #ff8fab 0%, var(--primary-color) 100%);
+  box-shadow: 0 2px 15px rgba(211, 86, 143, 0.4);
+  padding: 0.8rem 1rem;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-out;
+  margin-bottom: 30px;
+}
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  color: var(--white) !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand::before {
+  content: "🤍";
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.text-light {
+  color: #ffd6e7 !important;
+  font-weight: 500;
+  font-size: 1rem;
+  background-color: rgba(101, 5, 72, 0.906);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.weather-card {
+  background: linear-gradient(135deg, #ff8fab 0%, var(--secondary-color) 100%);
+  color: var(--white);
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(255, 20, 147, 0.2);
+  animation: fadeIn 0.5s ease-out;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 50px 0;
+}
+
+.image-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.2);
+  transition: transform 0.3s;
+  border: 1px solid var(--pink-accent);
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.image-card {
+  background: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(255, 105, 180, 0.2);
+  transition: transform 0.3s;
+  border: 1px solid var(--pink-accent);
+  animation: fadeIn 0.5s ease-out;
+  height: 350px; 
+  display: flex;
+  flex-direction: column;
+}
+
+.image-card img {
+  width: 100%;
+  height: 250px; 
+  object-fit: cover; 
+  object-position: center; 
+}
+
+.image-details {
+  padding: 15px;
+  background-color: #fff9fa;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .image-card {
+    height: 300px;
+  }
+  
+  .image-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-card {
+    height: 280px;
+  }
+  
+  .image-card img {
+    height: 180px;
+  }
+}
+  animation: fadeIn 0.5s ease-out;
+}
+
+.image-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.3);
+}
+
+.image-details {
+  padding: 10px;
+  background-color: #fff9fa;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-pink);
+  border-color: var(--dark-pink);
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--white);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(235, 171, 203, 0.98);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  border: 1px solid var(--pink-accent);
+  animation: fadeIn 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-bottom: 30px;
+  }
+  
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.image-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; 
+  object-position: center; 
+} 
