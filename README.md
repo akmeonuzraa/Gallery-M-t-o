@@ -88,10 +88,6 @@ Builds the app for production to the `build` folder. It correctly bundles React 
 - [Weather API](https://openweathermap.org/) - Real-time weather data
 - [Unsplash API](https://unsplash.com/developers) - High-quality city images
 
-## 📸 Screenshots
-
-*Coming soon - Add screenshots of your application here!*
-
 ## 🗺️ Roadmap
 
 - [ ] Add multi-language support
